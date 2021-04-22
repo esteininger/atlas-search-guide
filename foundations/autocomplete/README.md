@@ -46,4 +46,4 @@ In both development and production the application will start at http://localhos
 ```
 
 ## Author
-Reach out to (Isa Torres)[https://github.com/isamarietr] for help
+Reach out to [Isa Torres](https://github.com/isamarietr) for help
