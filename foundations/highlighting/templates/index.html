@@ -1,0 +1,250 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  @import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
+  .container {
+    margin-top: 20px;
+  }
+
+  .mb20 {
+    margin-bottom: 20px;
+  }
+
+  hgroup {
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  hgroup h1 {
+    font: 500 normal 1.625em "Roboto", Arial, Verdana, sans-serif;
+    color: #2a3644;
+    margin-top: 0;
+    line-height: 1.15;
+  }
+
+  hgroup h2.lead {
+    font: normal normal 1.125em "Roboto", Arial, Verdana, sans-serif;
+    color: #2a3644;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .search-result .thumbnail {
+    /* border-radius: 0 !important; */
+    width: 15em;
+  }
+
+  .search-result:first-child {
+    margin-top: 0 !important;
+  }
+
+  .search-result {
+    margin-top: 20px;
+  }
+
+  .search-result .col-md-2 {
+    border-right: 1px dotted #ccc;
+    min-height: 140px;
+  }
+
+  .search-result ul {
+    padding-left: 0 !important;
+    list-style: none;
+  }
+
+  .search-result ul li {
+    font: 400 normal .85em "Roboto", Arial, Verdana, sans-serif;
+    line-height: 30px;
+  }
+
+  .search-result ul li i {
+    padding-right: 5px;
+  }
+
+  .search-result .col-md-7 {
+    position: relative;
+  }
+
+  .search-result h3 {
+    font: 500 normal 1.375em "Roboto", Arial, Verdana, sans-serif;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .search-result h3>a,
+  .search-result i {
+    color: #248dc1 !important;
+  }
+
+  .search-result p {
+    font: normal normal 1.125em "Roboto", Arial, Verdana, sans-serif;
+  }
+
+  .search-result span.plus {
+    position: absolute;
+    right: 0;
+    top: 126px;
+  }
+
+  .search-result span.plus a {
+    background-color: #248dc1;
+    padding: 5px 5px 3px 5px;
+  }
+
+  .search-result span.plus a:hover {
+    background-color: #414141;
+  }
+
+  .search-result span.plus a i {
+    color: #fff !important;
+  }
+
+  /* .search-result span.border {
+    display: block;
+    width: 97%;
+    margin: 0 15px;
+    border-bottom: 1px dotted #ccc;
+  } */
+
+  .search-result .meta-search li {
+    font-weight: 600;
+  }
+  .search-result .meta-search li > span{
+    font-weight: 100;
+  }
+
+  .highlight {
+    background-color: #a94442;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+
+</style>
+
+<html>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Full Text Search Demo</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div id="custom-search-input" style="padding-left: 15px;">
+        <div class="input-group custom-search-form" style="width:100%;">
+          <input type="text" class="form-control" placeholder="search by keyword">
+        </div><!-- /input-group -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <hgroup class="mb20">
+    <h1>Search Results</h1>
+    <h2 class="lead"><strong class="text-danger" id="result-count">0</strong> results were found for the search for <strong class="text-danger" id="search-query">_____</strong></h2>
+  </hgroup>
+
+  <section class="col-md-12" id="search-results-placholder"></section>
+</div>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+
+  function autocomplete() {
+    $(':input').keyup(function() {
+      var letters = $(this).val();
+
+      $.ajax({
+          url: `/search?query=${letters}&path=title`
+        }).done(function(results){
+          var jsonResults = JSON.parse(results).docs
+          console.log(jsonResults)
+          render(letters, jsonResults)
+        })
+        .fail(function(err) {
+          console.log(err)
+        });
+
+    });
+  }
+
+  function highlight(highlights_arr){
+    let txt = ``;
+
+    highlights_arr.texts.forEach(function(item) {
+      if (item.type == 'hit'){
+        txt += `<b><span class="highlight"> ${item.value} </span></b>`;
+      }
+      else {
+        txt += item.value;
+      }
+    });
+    return txt
+  }
+
+
+  function render(letters, results) {
+    var placholder = $('#search-results-placholder');
+    placholder.empty();
+
+    // update count
+    $('#result-count').html(results.length)
+    // update search query
+    $('#search-query').html(letters)
+
+    let html = '';
+    $.each(results, function(index, item) {
+
+      let doc = item.document;
+
+      // // skip items without poster
+      // if (doc.poster == undefined) {
+      //   return true;
+      // }
+
+      html += `
+      <article class="search-result row">
+        <div class="col-md-3">
+          <div class="thumbnail"><img src="${doc.poster}" alt="Lorem ipsum" /></div>
+        </div>
+        <div class="col-md-2">
+          <ul class="meta-search">
+            <li>Released: <span>${doc.year}</span></li>
+            <li>Length: <span>${doc.runtime} mins</span></li>
+            <li>Rating: <span>${doc.rated}</span></li>
+          </ul>
+        </div>
+        <div class="col-md-7 excerpet">
+          <h3>${highlight(item.highlights[0])}</h3>
+          <!-- <h3>${doc.title}</h3> -->
+
+          <!-- <p>${highlight(item.highlights[0])}</p> -->
+          <p>${doc.fullplot}</p>
+          <p>Search score: ${item.score}</p>
+        </div>
+        <span class="clearfix borda"></span>
+      </article>
+    `
+    });
+    // place in html
+    placholder.append(html);
+  }
+
+
+  $(document).ready(function() {
+    autocomplete();
+  });
+</script>

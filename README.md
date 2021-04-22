@@ -14,10 +14,11 @@ Be sure to review the [common search gotchyas](context/gotchyas).
 | 2  | [Basic](foundations/basic)            | Run a simple text search.
 | 3  | [Fuzzy](foundations/fuzzy)            | Handle common typos
 | 4  | [Highlighting](foundations/highlighting)            | Add a relevance score and hit highlights to the results
-| 5  | [Phrase](foundations/phrase)            | Ordered sequence of words
-| 6  | [Diacritics](foundations/diacritics)            | Include multiple languages
-| 7  | [Compound](foundations/compound)            | Combine two or more operators into a single query (or clause)
-| 8  | [Explain](foundations/explain)            | See how the mongot (lucene) returns results to clients.
+| 5  | [Autocomplete](foundations/autocomplete)            | Search as you type
+| 6  | [Phrase](foundations/phrase)            | Ordered sequence of words
+| 7  | [Diacritics](foundations/diacritics)            | Include multiple languages
+| 8  | [Compound](foundations/compound)            | Combine two or more operators into a single query (or clause)
+| 9  | [Explain](foundations/explain)            | See how the mongot (lucene) returns results to clients.
 
 
 ## Search Patterns & Use Cases
