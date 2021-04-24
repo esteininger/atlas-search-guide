@@ -1,10 +1,10 @@
 # Atlas Full Text Search Assets & Patterns
 
-For specific instructions on how to run each pattern, click on the relevant label in the table(s) below.
+The purpose of this repository is to teach the foundations of __Atlas Full Text Search__ (which uses Lucene on the backend) in order to then use our knowledge to build search patterns.
 
-All links are focused on the use of __Atlas Full Text Search__, which showcase the full text search offering.
+Each category in the _Foundations_ section, below has a corresponding topic which is comprised of a Jupyter noteboook and a series of steps within to encourage learn by doing.
 
-Be sure to review the [common search gotchyas](context/gotchyas).
+Be sure to also review the [common search mistakes](context/mistakes) as you continue the foundations.
 
 ## Search Foundations (Review First)
 
