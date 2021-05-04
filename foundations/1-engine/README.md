@@ -21,7 +21,37 @@ def analyze(text):
 
 ### Index
 
+``` python
+def index():
+    index = {}
+    # for each movie, run the analyzer function above on title and add it to a set with the movies' ID
+    for document in documents:
+        for token in analyze(document['title']):
+            index[token] = set()
+            index[token].add(document['_id']['$oid'])
+
+    return index
+```
+
 ### Search
+
+``` python
+def search(query):
+    # tokenize the query     
+    analyzed_query = analyze(query)
+    # grab movie tokens from the index that match the tokens from the query    
+    results = [index().get(token, set()) for token in analyzed_query]
+
+    resulting_documents = []
+
+    # return all movies where the tokenized query matches the tokenized title
+    for result in results:
+        result_str = ', '.join(result)
+        for document in documents:
+            if document['_id']['$oid'] == result_str:
+                resulting_documents.append(document)
+    return resulting_documents
+```
 
 
 ## Source
