@@ -32,7 +32,6 @@ def search():
         }, {
             '$project': {
                 'document': "$$ROOT",
-                'highlights': {"$meta": "searchHighlights"},
                 # include score
                 'score': {
                     '$meta': 'searchScore'
