@@ -4,7 +4,7 @@ Basic search using term
 
 ## Basic Search
 
-[Notebook Link](/FTS Basic, Fuzzy & Highlighting.ipynb)
+[Notebook Link](https://github.com/esteininger/atlas-search-patterns/blob/master/foundations/2-basic/FTS Basic, Fuzzy & Highlighting.ipynb)
 
 ```python
   pipeline = [
@@ -21,7 +21,7 @@ Basic search using term
 
 ## Fuzzy
 
-[Notebook Link](/FTS Basic, Fuzzy & Highlighting.ipynb)
+[Notebook Link](https://github.com/esteininger/atlas-search-patterns/blob/master/foundations/2-basic/FTS Basic, Fuzzy & Highlighting.ipynb)
 
 ```python
 pipeline = [
@@ -41,7 +41,7 @@ pipeline = [
 
 ## Highlighting
 
-[Notebook Link](/FTS Basic, Fuzzy & Highlighting.ipynb)
+[Notebook Link](https://github.com/esteininger/atlas-search-patterns/blob/master/foundations/2-basic/FTS Basic, Fuzzy & Highlighting.ipynb)
 
 
 ```python
