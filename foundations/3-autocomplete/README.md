@@ -4,15 +4,9 @@ The autocomplete operator performs a search for a word or phrase that contains a
 
 [Docs](https://docs.atlas.mongodb.com/reference/atlas-search/autocomplete/)
 
-
-## Setup
-
-![Setup Index](assets/index.png)
-
 ## Knowledge
 
 ### Grams:
-
 Max Grams -
 
 Min Grams -
@@ -21,10 +15,44 @@ edgeGram -
 
 nGram -
 
+Demonstration of Auto
+## Installation
+
+1. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pymongo and flask.
+
+```bash
+pip install pymongo
+pip install flask
+```
+
+2. Download the [sample_mflix collection](https://docs.atlas.mongodb.com/sample-data/sample-mflix/) from MongoDB Atlas
+
+3. Create a `config.py` file with your `mongo_uri` connection string from Atlas.
+
+4. Setup an autocomplete index:
+
+``` json
+{
+  "mappings": {
+    "dynamic": true,
+    "fields": {
+      "title": [
+        {
+          "foldDiacritics": false,
+          "maxGrams": 15,
+          "minGrams": 2,
+          "tokenization": "edgeGram",
+          "type": "autocomplete"
+        }
+      ]
+    }
+  }
+}
+```
+
 ## Code
 
 ``` python
-
 pipeline = [
     {
         '$search': {
@@ -35,20 +63,10 @@ pipeline = [
         }
     }
 ]
-
 ```
 
-To run, simply install your dependencies via:
+## Usage
 
-``` shell
-pip install -r requirements.txt
-```
-
-then run:
-
-``` shell
+```bash
 python manage.py
 ```
-
-## Author
-Reach out to [Ethan Steininger](https://github.com/esteininger) for help

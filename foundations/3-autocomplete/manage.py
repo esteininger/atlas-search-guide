@@ -15,8 +15,8 @@ conn = pymongo.MongoClient(mongo_uri, ssl_cert_reqs=ssl.CERT_NONE)
 collection = conn['sample_mflix']['movies']
 
 # endpoint
-@app.route('/autocomplete', methods=['GET'])
-def autocomplete():
+@app.route('/search', methods=['GET'])
+def search():
     query = request.args.get('query', default=None, type=str)
     path = request.args.get('path', default='title', type=str)
 
@@ -26,13 +26,14 @@ def autocomplete():
                 'autocomplete': {
                     'query': query,
                     'path': path,
+                    'tokenOrder': 'sequential'
                 }
             }
-        },
-        {
+        }, {
             '$project': {
-                'title': 1,
-                '_id': 0,
+                'document': "$$ROOT",
+                'highlights': {"$meta": "searchHighlights"},
+                # include score
                 'score': {
                     '$meta': 'searchScore'
                 }
