@@ -18,7 +18,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 6  | Phrase           | Ordered sequence of words
 | 7  | Diacritics           | Include multiple languages
 | 8  | Compound            | Combine two or more operators into a single query (or clause)
-| 9  | Explain            | See how the mongot (lucene) returns results to clients.
+| 9  | Explain            | Understand how the mongot (lucene) returns results in order to tune performance.
 
 
 ## Search Patterns & Use Cases
