@@ -50,7 +50,7 @@ pip install flask
 }
 ```
 
-## Code
+## Query
 
 ``` python
 pipeline = [
