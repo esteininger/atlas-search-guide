@@ -12,8 +12,8 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | [Engine](foundations/1-engine)            | Review the basic components of a full-text search engine (including tokenization), and build one.
 | 2  | [Basic](foundations/2-basic)            | Run a simple text search.
-| 3  | Fuzzy           | Handle common typos
-| 4  | [Highlighting](foundations/4-highlighting)            | Add a relevance score and hit highlights to the results
+| 3  | [Fuzzy](foundations/2-basic)            | Handle common typos
+| 4  | [Highlighting](foundations/2-basic)            | Add a relevance score and hit highlights to the results
 | 5  | [Autocomplete](foundations/5-autocomplete)            | Search as you type
 | 6  | Phrase           | Ordered sequence of words
 | 7  | Diacritics           | Include multiple languages
