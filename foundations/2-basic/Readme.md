@@ -63,5 +63,11 @@ pipeline = [
 
 ```
 
+## App
+
+And here's an app that combines it all into a single REST endpoint:
+
+[link](/app)
+
 ## Author
 Reach out to [Ethan Steininger](https://github.com/esteininger) for help
