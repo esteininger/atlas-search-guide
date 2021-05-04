@@ -6,16 +6,57 @@ The autocomplete operator performs a search for a word or phrase that contains a
 
 ## Knowledge
 
-### Grams:
-Max Grams -
+### Grams
 
-Min Grams -
+A Gram is just a token of text. See the [engine](https://github.com/esteininger/atlas-search-patterns/tree/master/foundations/1-engine) to build your own grams or tokens.
 
-edgeGram -
+edgeGram - Tokenization by whitespace
 
-nGram -
+nGram - Tokenization by character
 
-Demonstration of Auto
+For: `The quick brown fox jumps over the lazy dog.`
+
+edgeGram:
+
+```
+Th
+The
+The{SPACE}
+The q
+qu
+qui
+quic
+quick
+...
+```
+
+nGram:
+
+```
+Th
+The
+The{SPACE}
+The q
+he
+he{SPACE}
+he q
+he qu
+e{SPACE}
+e q
+e qu
+e qui
+{SPACE}q
+{SPACE}qu
+{SPACE}qui
+{SPACE}quic
+qu
+qui
+quic
+quick
+...
+```
+
+
 ## Installation
 
 1. Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pymongo and flask.
