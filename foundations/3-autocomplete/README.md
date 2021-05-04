@@ -38,8 +38,17 @@ pipeline = [
 
 ```
 
-[Link to Notebook](#)
+To run, simply install your dependencies via:
 
+``` shell
+pip install -r requirements.txt
+```
+
+then run:
+
+``` shell
+python manage.py
+```
 
 ## Author
 Reach out to [Ethan Steininger](https://github.com/esteininger) for help
