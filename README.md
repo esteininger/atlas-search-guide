@@ -30,3 +30,11 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 3  | Advanced Scoring          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | Sorting           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | Custom Analyzer         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
+
+## Credits
+
+This project is made possible by the community surrounding it and especially the wonderful people and projects listed in this document.
+
+- [Marcus Eagan](https://github.com/marcussorealheis)
+- [John Misczak](https://github.com/misczak)
+- [Roy Kiesler](https://github.com/rkiesler1)
