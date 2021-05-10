@@ -31,7 +31,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 4  | Sorting           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | Custom Analyzer         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
 
-## Example Search Architectures
+## Example Search Architecture
 
 | #  | Label                              | Description                                                                                                                                                                                                                                                                 
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
