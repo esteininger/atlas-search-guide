@@ -17,7 +17,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 5  | [Autocomplete](foundations/3-autocomplete)            | Search as you type
 | 6  | Phrase           | Ordered sequence of words
 | 7  | Diacritics           | Include multiple languages
-| 8  | Compound            | Combine two or more operators into a single query (or clause)
+| 8  | [Compound](foundations/6-compound)            | Combine two or more operators into a single query (or clause)
 | 9  | Explain            | Understand how the mongot (lucene) returns results in order to tune performance.
 
 
@@ -30,6 +30,12 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 3  | Advanced Scoring          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | Sorting           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | Custom Analyzer         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
+
+## Example Search Architectures
+
+| #  | Label                              | Description                                                                                                                                                                                                                                                                 
+|----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1  | [Event Streaming](architecture/1-event-streaming)           | Using Realm and Kinesis, initiate a workflow where as documents are updated, they're pushed to a Kinesis queue and then pushed to Atlas to be searched.  
 
 ## Credits
 
