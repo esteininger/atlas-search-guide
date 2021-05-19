@@ -7,6 +7,7 @@ from time import time
 
 client = db['test'].speed_test
 
+
 def bytes_to_mb(size_bytes):
     size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
     i = int(math.floor(math.log(size_bytes, 1024)))
@@ -34,20 +35,25 @@ def size_limit():
 
 
 def query_speed_test():
+    # we're hiding the massive key we made earlier
+    # this will reduce the results however since payload
+    # size is smaller, but for the sake of being an eyesore
     pipe = [
         {
             '$search': {
                 'index': 'large_doc_test',
                 'text': {
                     'query': 'magnam',
-                    'path': {
-                        'wildcard': '*'
-                    }
+                    'path': 'key'
                 }
+            }
+        }, {
+            '$project': {
+                'key': 0
             }
         }
     ]
-    client.aggregate(pipe)
+    return list(client.aggregate(pipe))
 
 
 if __name__ == '__main__':
@@ -58,7 +64,7 @@ if __name__ == '__main__':
     print(f"timer started")
     # query
     print('querying...')
-    query_speed_test()
+    print(query_speed_test())
     # finish
     end = time()
     print(f"timer ended")
