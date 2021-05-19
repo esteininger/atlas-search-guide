@@ -25,8 +25,13 @@ def search():
             '$search': {
                 'autocomplete': {
                     'query': query,
-                    'path': path,
-                    'tokenOrder': 'sequential'
+                    'path': ['title', 'plot'],
+                    'tokenOrder': 'sequential',
+                    'score':{
+                        'boost': {
+                            'path': 'title'
+                        }
+                    }
                 }
             }
         }, {
@@ -50,7 +55,8 @@ def search():
         }
     ]
     docs = list(collection.aggregate(agg_pipeline))
-    json_result = json_util.dumps({'docs': docs}, json_options=json_util.RELAXED_JSON_OPTIONS)
+    json_result = json_util.dumps(
+        {'docs': docs}, json_options=json_util.RELAXED_JSON_OPTIONS)
     return jsonify(json_result)
 
 # page
