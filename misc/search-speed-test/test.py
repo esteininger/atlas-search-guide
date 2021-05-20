@@ -19,6 +19,7 @@ def bytes_to_mb(size_bytes):
 def size_limit():
     t = lorem.text()
 
+    # this is ~ 12mb of text
     number_of_times = 9000
 
     str = ''
@@ -34,7 +35,7 @@ def size_limit():
     print('inserted')
 
 
-def query_speed_test():
+def query():
     # we're hiding the massive key we made earlier
     # this will reduce the results however since payload
     # size is smaller, but for the sake of being an eyesore
@@ -64,7 +65,7 @@ if __name__ == '__main__':
     print(f"timer started")
     # query
     print('querying...')
-    print(query_speed_test())
+    print(query())
     # finish
     end = time()
     print(f"timer ended")
