@@ -42,6 +42,6 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 This project is made possible by the community surrounding it and especially the wonderful people and projects listed in this document.
 
 - [Marcus Eagan](https://github.com/marcussorealheis)
-- [John Misczak](https://github.com/misczak)
+- [John Misczak](https://github.com/misczak) - [Event Streaming into Search Indexes](https://github.com/esteininger/atlas-search-patterns/tree/master/architecture/1-event-streaming)
 - [Roy Kiesler](https://github.com/rkiesler1)
 - [Harshad Dhavale](https://github.com/harshadpd) - [Custom Synonyms Mapping File](https://github.com/esteininger/atlas-search-patterns/blob/master/misc/atlas-apis/index-management/createIndex.py)
