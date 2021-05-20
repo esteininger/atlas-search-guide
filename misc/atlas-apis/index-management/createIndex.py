@@ -6,6 +6,7 @@ from settings import *
 import json
 
 clusterName = 'FINRA-adReg-PoV'
+mappingsAsJSON = json.load(open('mappingsFile.json'))
 
 url = f"https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupID}/clusters/{clusterName}/fts/indexes?pretty=true"
 headers = {'Content-Type': 'application/json'}
@@ -24,12 +25,7 @@ data = {
     },
     "analyzers": [{
         "charFilters": [{
-            "mappings": {
-                "Motorcycle": "Bike",
-                "Peaceful": "Calm",
-                "Seagull": "Gull",
-                "Things": "Stuff"
-            },
+            "mappings": mappingsAsJSON,
             "type": "mapping"
         }],
         "name": "wordMappingAnalyzer",

@@ -44,3 +44,4 @@ This project is made possible by the community surrounding it and especially the
 - [Marcus Eagan](https://github.com/marcussorealheis)
 - [John Misczak](https://github.com/misczak)
 - [Roy Kiesler](https://github.com/rkiesler1)
+- [Harshad Dhavale](https://github.com/harshadpd) - Custom synonyms mapping
