@@ -27,7 +27,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | Multi Tenant           | Ability to build search applications that limit what an end user can search for based on their tenancy.                                       
 | 2  | Weighted Fields           | Implement relevance weights where some fields more important than  other fields.   
-| 3  | Advanced Scoring          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
+| 3  | [Advanced Scoring](patterns/3-advanced-scoring)          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | Sorting           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | Custom Analyzer         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
 
@@ -42,6 +42,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | #  | Label                              | Description                                                                                                                                                                                                                                                                 
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | [Index Creation API](misc/atlas-apis)           | Using REST to modify Search indexes
+| 2  | [Index Speed Test](misc/search-speed-test)           | How long does it take to create an index and return a search result?
 
 ## Credits
 
