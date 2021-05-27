@@ -37,6 +37,12 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | [Event Streaming](architecture/1-event-streaming)           | Using Realm and Kinesis, initiate a workflow where as documents are updated, they're pushed to a Kinesis queue and then pushed to Atlas to be searched.  
 
+## Miscellaneous
+
+| #  | Label                              | Description                                                                                                                                                                                                                                                                 
+|----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1  | [Index Creation API](misc/atlas-apis)           | Using REST to modify Search indexes
+
 ## Credits
 
 This project is made possible by the community surrounding it and especially the wonderful people and projects listed in this document.
