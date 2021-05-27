@@ -11,34 +11,36 @@ Let’s take an example in which a Yelp user is searching for "Vietnamese restau
 
 ``` javascript
 [{
-		"$search": {
-			"index": "restaurants",
-			"compound": {
-				"must": [{
-					"text": {
-						"query": "vietnamese",
-						"path": "cuisine",
-						"score": {
-							"function": {
-								"log1p": {
-									"path": {
-										"value": "review_count",
-										"undefined": 4
-									}
-								}
-							}
-						}
-					}
-				}],
-				"should": [{
-					"near": {
-						"origin": {
-							"type": "Point",
-							"coordinates": [-74.0392709, 40.7590403]
-						},
-						"pivot": 1609,
-						"path": "address.coord"
-					}
-				}]
-			}}}]
+  "$search": {
+    "index": "restaurants",
+    "compound": {
+      "must": [{
+        "text": {
+          "query": "vietnamese",
+          "path": "cuisine",
+          "score": {
+            "function": {
+              "log1p": {
+                "path": {
+                  "value": "review_count",
+                  "undefined": 4
+                }
+              }
+            }
+          }
+        }
+      }],
+      "should": [{
+        "near": {
+          "origin": {
+            "type": "Point",
+            "coordinates": [-74.0392709, 40.7590403]
+          },
+          "pivot": 1609,
+          "path": "address.coord"
+        }
+      }]
+    }
+  }
+}]
 ```
