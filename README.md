@@ -29,7 +29,7 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 | 2  | [Weighted Fields](patterns/2-weighted-fields)           | Implement relevance weights where some fields more important than  other fields.   
 | 3  | [Advanced Scoring](patterns/3-advanced-scoring)          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | [Sorting](patterns/4-sorting)           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
-| 5  | [Custom Analyzer](5-custom-analyzer)         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
+| 5  | [Custom Analyzer](patterns/5-custom-analyzer)         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
 
 
 ## Example Search Architecture
@@ -50,6 +50,6 @@ Be sure to also review the [common search mistakes](context/mistakes) as you con
 This project is made possible by the community surrounding it and especially the wonderful people and projects listed in this document.
 
 - [Marcus Eagan](https://github.com/marcussorealheis)
+- [Harshad Dhavale](https://github.com/harshadpd) - [Custom Synonyms Mapping File](https://github.com/esteininger/atlas-search-patterns/blob/master/misc/atlas-apis/index-management/createIndex.py)
 - [John Misczak](https://github.com/misczak) - [Event Streaming into Search Indexes](https://github.com/esteininger/atlas-search-patterns/tree/master/architecture/1-event-streaming)
 - [Roy Kiesler](https://github.com/rkiesler1)
-- [Harshad Dhavale](https://github.com/harshadpd) - [Custom Synonyms Mapping File](https://github.com/esteininger/atlas-search-patterns/blob/master/misc/atlas-apis/index-management/createIndex.py)
