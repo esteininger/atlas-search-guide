@@ -1,6 +1,6 @@
 # Atlas Full Text Search Assets & Patterns
 
-The purpose of this repository is to teach the foundations of __Atlas Full Text Search__ (which uses Lucene on the backend) in order to then use our knowledge to build search patterns.
+The purpose of this repository is to teach the foundations of [Atlas Full Text Search](https://docs.atlas.mongodb.com/reference/atlas-search/query-syntax/) (which provides a layer of code on top of Lucene Core) in order to then use our knowledge to build search patterns.
 
 Each category in the _Foundations_ section, below has a corresponding topic which is comprised of a Jupyter noteboook and a series of steps within to encourage learn by doing.
 
