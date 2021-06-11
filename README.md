@@ -1,10 +1,12 @@
-# Atlas Full Text Search Assets & Patterns
+# Atlas Full Text Guide
 
-The purpose of this repository is to teach the foundations of [Atlas Full Text Search](https://docs.atlas.mongodb.com/reference/atlas-search/query-syntax/) (which provides a layer of code on top of Lucene Core) in order to then use our knowledge to build search patterns.
+The purpose of this repository is to teach the foundations of [Atlas Full Text Search](https://docs.atlas.mongodb.com/reference/atlas-search/query-syntax/), an operator within MongoDB that is belt upon Lucene Core. 
 
 Each category in the _Foundations_ section, below has a corresponding topic which is comprised of a Jupyter noteboook and a series of steps within to encourage learn by doing.
 
-Be sure to also review the [common search mistakes](context/mistakes) as you continue the foundations.
+Start with Engine, where you will re-create a search engine from scratch, then continue into search foundations and finally build complex applications. 
+
+Note: there is a [common search mistakes](context/mistakes) section to be mindful of as you continue the foundations.
 
 ## Search Foundations (Review First)
 
