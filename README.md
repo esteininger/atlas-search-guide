@@ -1,5 +1,7 @@
 # Atlas Full Text Guide
 
+![alt text](https://webimages.mongodb.com/_com_assets/cms/integrated?auto=format%2Ccompress&fit=undefined&w=1074)
+
 The purpose of this repository is to teach the foundations of [Atlas Full Text Search](https://docs.atlas.mongodb.com/reference/atlas-search/query-syntax/), an operator within MongoDB that is belt upon Lucene Core. 
 
 Each category in the _Foundations_ section, below has a corresponding topic which is comprised of a Jupyter noteboook and a series of steps within to encourage learn by doing.
