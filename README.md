@@ -34,6 +34,7 @@ Note: there is a [common search mistakes](context/mistakes) section to be mindfu
 | 3  | [Advanced Scoring](patterns/3-advanced-scoring)          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | [Sorting](patterns/4-sorting)           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | [Custom Analyzer](patterns/5-custom-analyzer)         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
+| 6  | [Faceting](#)         | Dynamically cluster search results into categories in order to drill down
 
 
 ## Example Search Architecture
