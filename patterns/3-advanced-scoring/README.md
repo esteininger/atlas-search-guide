@@ -1,6 +1,5 @@
 # Advanced Scoring (boost results by variable field)
 
-
 ## Explanation
 
 The score.boost key allows developers to apply arithmetic to modify the relevance scores that Lucene natively returns in your query results, but often that can produce irrelevant documents.
@@ -44,3 +43,11 @@ Let’s take an example in which a Yelp user is searching for "Vietnamese restau
   }
 }]
 ```
+
+### Author(s)
+
+[Ethan Steininger](https://github.com/esteininger)
+
+### References
+
+Docs: [https://docs.atlas.mongodb.com/reference/atlas-search/scoring/#function](https://docs.atlas.mongodb.com/reference/atlas-search/scoring/#function)
