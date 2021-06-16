@@ -1,16 +1,35 @@
 # Atlas Full Text Guide
 
-<img src="https://webimages.mongodb.com/_com_assets/cms/integrated?auto=format%2Ccompress&fit=undefined&w=1074" alt="drawing" width="200"/>
 
-The purpose of this repository is to teach the foundations of [Atlas Full Text Search](https://docs.atlas.mongodb.com/reference/atlas-search/query-syntax/), an operator within MongoDB that is belt upon Lucene Core. 
+<p align="center">
+<img src="https://webimages.mongodb.com/_com_assets/cms/integrated?auto=format%2Ccompress&fit=undefined&w=1074" width="200px">
+</p>
 
-Each category in the _Foundations_ section, below has a corresponding topic which is comprised of a Jupyter noteboook and a series of steps within to encourage learn by doing.
+<p align="center">
+<b>Full Text Search <ins>Directly</ins> in your Database</b>
+</p>
 
-Start with Engine, where you will re-create a search engine from scratch, then continue into search foundations and finally build complex applications. 
+<!-- start elevator-pitch -->
 
+Build fast, relevant, full-text search capabilities on top of your data in the cloud
+
+This Full Text Search Guide teaches the foundations and enhancements, so you can build large-scale full text search applications without managing indexes, hardware or replication.
+
+
+**Foundations** - Start with building a full text search application from scratch in under 100 lines of Python code, then continue to apply additional search-native functions like autocomplete, scoring, highlighting and more.
+
+```
 Note: there is a [common search mistakes](context/mistakes) section to be mindful of as you continue the foundations.
+```
 
-## Search Foundations (Review First)
+**Patterns & Use Cases** - Combine your knowledge from Foundations and apply it to solve actual business problems. Examples include real world use cases such as relevance score boosting in a restaurant search engine.
+
+**Architecture** - Full Text Search doesn't live in a bubble, the data needs to come in and often out as well. Learn how others integrate technologies such as Kafka and S3 into their Full Text Search stack to scale effortlessly.
+
+**Miscellaneous** - Other content that didn't fit the categories above. This includes examples on using the API to create custom synonym mapping layers, testing search index consistency latency, and more.
+
+
+## Search Foundations
 
 | #  | Label                              | Description                                                                                                                                                                                                                                                                 
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
