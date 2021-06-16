@@ -1,6 +1,3 @@
-# Atlas Full Text Guide
-
-
 <p align="center">
 <img src="https://webimages.mongodb.com/_com_assets/cms/integrated?auto=format%2Ccompress&fit=undefined&w=1074" width="200px">
 </p>
@@ -17,10 +14,6 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 
 
 **Foundations** - Start with building a full text search application from scratch in under 100 lines of Python code, then continue to apply additional search-native functions like autocomplete, scoring, highlighting and more.
-
-```
-Note: there is a [common search mistakes](context/mistakes) section to be mindful of as you continue the foundations.
-```
 
 **Patterns & Use Cases** - Combine your knowledge from Foundations and apply it to solve actual business problems. Examples include real world use cases such as relevance score boosting in a restaurant search engine.
 
