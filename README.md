@@ -6,24 +6,18 @@
 <b>Full Text Search <ins>Directly</ins> in your Database</b>
 </p>
 
-<!-- start elevator-pitch -->
 
 Build fast, relevant, full-text search capabilities on top of your data in the cloud
 
 This Full Text Search Guide teaches the foundations and enhancements, so you can build large-scale full text search applications without managing indexes, hardware or replication.
 
+🌩️ **Foundations** - Start with building a full text search application from scratch in under 100 lines of Python code, then continue to apply additional search-native functions like autocomplete, scoring, highlighting and more.
 
-**Foundations** - Start with building a full text search application from scratch in under 100 lines of Python code, then continue to apply additional search-native functions like autocomplete, scoring, highlighting and more.
+🌌 **Patterns & Use Cases** - Combine your knowledge from Foundations and apply it to solve actual business problems. Examples include real world use cases such as relevance score boosting in a restaurant search engine.
 
-```
-Note: there is a [common search mistakes](context/mistakes) section to be mindful of as you continue the foundations.
-```
+🍱 **Architecture** - Full Text Search doesn't live in a bubble, the data needs to come in and often out as well. Learn how others integrate technologies such as Kafka and S3 into their Full Text Search stack to scale effortlessly.
 
-**Patterns & Use Cases** - Combine your knowledge from Foundations and apply it to solve actual business problems. Examples include real world use cases such as relevance score boosting in a restaurant search engine.
-
-**Architecture** - Full Text Search doesn't live in a bubble, the data needs to come in and often out as well. Learn how others integrate technologies such as Kafka and S3 into their Full Text Search stack to scale effortlessly.
-
-**Miscellaneous** - Other content that didn't fit the categories above. This includes examples on using the API to create custom synonym mapping layers, testing search index consistency latency, and more.
+📦 **Miscellaneous** - Other content that didn't fit the categories above. This includes examples on using the API to create custom synonym mapping layers, testing search index consistency latency, and more.
 
 
 ## Search Foundations
