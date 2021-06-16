@@ -1,6 +1,3 @@
-# Atlas Full Text Guide
-
-
 <p align="center">
 <img src="https://webimages.mongodb.com/_com_assets/cms/integrated?auto=format%2Ccompress&fit=undefined&w=1074" width="200px">
 </p>
