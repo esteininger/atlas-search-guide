@@ -55,4 +55,5 @@ BONUS: If you want the materialized view collection to update as new movies or s
 ### References  
 
 [$lookup](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/)
+
 [Materialized View](https://docs.mongodb.com/manual/core/materialized-views/)
