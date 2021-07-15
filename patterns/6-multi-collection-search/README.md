@@ -1,5 +1,6 @@
 # Searching Across Multiple Collections
 
+Say you want the ability to run a $search across multiple collections in your MongoDB database. By combining other operators, you can do exactly that! 
 
 ### Code Examples
 
