@@ -10,4 +10,4 @@
 
 ### References  
 
-Docs: [https://docs.atlas.mongodb.com/reference/atlas-search/analyzers/custom/](https://docs.atlas.mongodb.com/reference/atlas-search/analyzers/custom/)
+Docs: 

@@ -45,7 +45,7 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 | 4  | [Sorting](patterns/4-sorting)           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
 | 5  | [Custom Analyzer](patterns/5-custom-analyzer)         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
 | 6  | [Multi Collection Search](patterns/6-multi-collection-search)         | Run a search query that spans multiple collections
-| 7  | [Faceting](#)         | Dynamically cluster search results into categories in order to drill down
+| 7  | [Faceting](patterns/7-faceting)         | Dynamically cluster search results into categories in order to drill down
 
 
 ## Example Search Architecture
