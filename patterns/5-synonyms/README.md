@@ -1,4 +1,4 @@
-# Synonyms based search using Custom Analyzers
+# Synonym Search
 
 As of MongoDB Atlas release 5.0, Search has the ability to use a seperate synonyms collection to map words together as either `equivalent` or `explicit`.
 
