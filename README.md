@@ -43,9 +43,11 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 | 2  | [Weighted Fields](patterns/2-weighted-fields)           | Implement relevance weights where some fields more important than  other fields.   
 | 3  | [Advanced Scoring](patterns/3-advanced-scoring)          |  Ensure the boosted variable doesn’t overwhelm the relevance of our search results.  
 | 4  | [Sorting](patterns/4-sorting)           |  Using the Atlas Search near operator to sort documents based on a numeric, date, or geo field.
-| 5  | [Custom Analyzer](patterns/5-custom-analyzer)         | Implement a synonym-based search functionality by leveraging the Custom Analyzers with the mapping character filter.
+| 5  | [Synonyms](patterns/5-synonyms)         | Implement a synonym-based search functionality
 | 6  | [Multi Collection Search](patterns/6-multi-collection-search)         | Run a search query that spans multiple collections
 | 7  | [Faceting](patterns/7-faceting)         | Dynamically cluster search results into categories in order to drill down
+| 8  | [Custom Analyzers](patterns/8-custom-analyzers)         | Building our own custom analyzers to satisfy different app requirements
+
 
 
 ## Example Search Architecture
