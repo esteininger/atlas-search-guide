@@ -50,7 +50,8 @@ Explicit - Replaces one word with the other
             'text': {
                 'query': 'wakeful',
                 'path': 'plot'
-            }
+            },
+            'synonyms': 'mySynonyms'
         }
     }
 ]
