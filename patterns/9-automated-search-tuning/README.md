@@ -20,7 +20,7 @@ As events are fired, log them to the `clickstreams` collection, like:
 
 ```javascript
 [{
-		"user_id": "1",
+		"session_id": "1",
 		"event_id": "search_query",
 		"metadata": {
 			"search_value": "romanian food"
@@ -28,22 +28,22 @@ As events are fired, log them to the `clickstreams` collection, like:
 		"timestamp": "1"
 	},
 	{
-		"user_id": "1",
+		"session_id": "1",
 		"event_id": "add_to_cart",
 		"timestamp": "2"
 	},
 	{
-		"user_id": "1",
+		"session_id": "1",
 		"event_id": "checkout",
 		"timestamp": "3"
 	},
 	{
-		"user_id": "1",
+		"session_id": "1",
 		"event_id": "payment_success",
 		"timestamp": "4"
 	},
 	{
-		"user_id": "2",
+		"session_id": "2",
 		"event_id": "search_query",
 		"metadata": {
 			"search_value": "hungarian food"
@@ -51,43 +51,95 @@ As events are fired, log them to the `clickstreams` collection, like:
 		"timestamp": "1"
 	},
 	{
-		"user_id": "2",
+		"session_id": "2",
 		"event_id": "add_to_cart",
 		"timestamp": "2"
 	}
 ]
 ```
 
-In this overly simplified list of events we can conclude that `{"user_id":"1"}` searched for "romanian food", which led to a higher conversion rate, `payment_success`, compared to `{"user_id":"2"}`, who searched "hungarian food" and stalled after `add_to_cart`.
-
-So let's prepare the data for our search_tuner script.
 
 
-### 2. Create a materialized view that groups by user_id and search_value, then filters on the presence of
+In this overly simplified list of events we can conclude that `{"session_id":"1"}` searched for "romanian food", which led to a higher conversion rate, `payment_success`, compared to `{"session_id":"2"}`, who searched "hungarian food" and stalled after `add_to_cart`.
+
+You can import this data yourself using [sample_data.json](/sample_data.json)
+
+Let's prepare the data for our search_tuner script.
+
+
+### 2. Create a view that groups by session_id, then filters on the presence of searches
 
 By the way, it's no problem that only some documents have a `metadata` field, our `$group` operator can intelligently identify the ones that do vs don't.
 
-``` javascript
+``` python
 
 [
-  // first we'll sort by the sequence the events occurred in our UI, after-all it's the logical order we'll be comparing to determine a synonym.
-  {
-    '$sort': {'$timestamp': -1}
-  }
+    # first we sort by timestamp to get everything in the correct sequence of events,
+    # as that is what we'll be using to draw logical correlations
+    {
+        '$sort': {
+            'timestamp': 1
+        }
+    },
+    # next, we'll group by a unique session_id, include all the corresponding events, and begin
+    # the filter for determining if a search_query exists
+    {
+        '$group': {
+            '_id': '$session_id',
+            'events': {
+                '$push': '$$ROOT'
+            },
+            'isSearchQueryPresent': {
+                '$sum': {
+                    '$cond': [
+                        {
+                            '$eq': [
+                                '$event_id', 'search_query'
+                            ]
+                        }, 1, 0
+                    ]
+                }
+            }
+        }
+    },
+    # we hide session_ids where there is no search query
+    # then create a new field, an array called searchQuery, which we'll use to parse
+    {
+        '$match': {
+            'isSearchQueryPresent': {
+                '$gte': 1
+            }
+        }
+    },
+    {
+        '$unset': 'isSearchQueryPresent'
+    },
+    {
+        '$set': {
+            'searchQuery': '$events.metadata.search_value'
+        }
+    }
 ]
 
 ```
 
+Let's create the view by building the query, then going into Compass and adding it as a new collection called `group_by_session_id_and_search_query`:
 
+![compass view screenshot](/assets/compass_view_creation.png)
 
+### 3. Build a scheduled job that compares similar clickstreams and pushes the resulting synonyms to the synonyms collection
 
+```python
+print('hello world')
+```
 
+Run [the script](/search_tuner.py) yourself
 
-
-
-### 3. Build a scheduled realm trigger that updates this materialized view once a day, then pushes the resulting synonyms to the synonyms collection
+### 4. Enhance our search query with the newly appended synonyms.
+See [the synonyms tutorial](../patterns/synonyms)
 
 
 ### Credit & Influence
 
-[Roy Kiesler](https://github.com/)
+[Asya Kamsky](kamsky.org/stupid-tricks-with-mongodb/aggregating-over-time)
+[Roy Kiesler]()

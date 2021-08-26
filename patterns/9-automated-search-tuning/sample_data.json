@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c3"
+  },
+  "user_id": "1",
+  "event_id": "search_query",
+  "metadata": {
+    "search_value": "romanian food"
+  },
+  "timestamp": "1"
+},{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c4"
+  },
+  "user_id": "1",
+  "event_id": "add_to_cart",
+  "timestamp": "2"
+},{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c5"
+  },
+  "user_id": "1",
+  "event_id": "checkout",
+  "timestamp": "3"
+},{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c6"
+  },
+  "user_id": "1",
+  "event_id": "payment_success",
+  "timestamp": "4"
+},{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c7"
+  },
+  "user_id": "2",
+  "event_id": "search_query",
+  "metadata": {
+    "search_value": "hungarian food"
+  },
+  "timestamp": "1"
+},{
+  "_id": {
+    "$oid": "61267bec6f93899dfc8606c8"
+  },
+  "user_id": "2",
+  "event_id": "add_to_cart",
+  "timestamp": "2"
+},{
+  "_id": {
+    "$oid": "6127b5d86f93899dfc8606df"
+  },
+  "user_id": "3",
+  "event_id": "add_to_cart",
+  "timestamp": "1"
+}]
