@@ -125,7 +125,8 @@ By the way, it's no problem that only some documents have a `metadata` field, ou
 
 Let's create the view by building the query, then going into Compass and adding it as a new collection called `group_by_session_id_and_search_query`:
 
-![compass view screenshot](assets/compass_view_creation.png)
+<img src="assets/compass_view_creation.png" alt="compass view screenshot" width="50%"/>
+
 
 ### 3. Build a scheduled job that compares similar clickstreams and pushes the resulting synonyms to the synonyms collection
 
@@ -142,4 +143,5 @@ See [the synonyms tutorial](../patterns/5-synonyms)
 ### Credit & Influence
 
 [Asya Kamsky](kamsky.org/stupid-tricks-with-mongodb/aggregating-over-time)
+
 [Roy Kiesler]()
