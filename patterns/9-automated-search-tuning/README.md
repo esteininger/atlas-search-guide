@@ -1,6 +1,6 @@
 # Creating an Automatic Search Improvement Feedback Loop
 
-The standard way to improve your search queries' relevance is through manual intervention. For example, you can introduce [score boosting](#) to ensure searches where a key is present in some fields weighs higher than others, this is however fixed by by nature. The results are dynamic but the logic itself doesn't change via the query.
+The standard way to improve your search queries' relevance is through manual intervention. For example, you can introduce [score boosting](../3-advanced-scoring) to ensure searches where a key is present in some fields weighs higher than others, this is however fixed by by nature. The results are dynamic but the logic itself doesn't change via the query.
 
 The following project will showcase how to create a feedback loop that is self-tuning in order to deliver incrementally more relevant search results to your users.
 
@@ -136,8 +136,8 @@ print('hello world')
 Run [the script](/search_tuner.py) yourself
 
 ### 4. Enhance our search query with the newly appended synonyms.
-See [the synonyms tutorial](../patterns/synonyms)
 
+See [the synonyms tutorial](../patterns/synonyms)
 
 ### Credit & Influence
 
