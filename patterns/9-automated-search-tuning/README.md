@@ -8,7 +8,7 @@ The following project will showcase how to create a feedback loop that is self-t
 
 Let's say we have a food search application, where a user searches for "Romanian Food". Assuming we're logging every users' clickstream data (their step-by-step interaction with our application), we can take a look at this "sequence" and compare it to other results that have yielded a strong CTA (call to action), a successful checkout.
 
-Maybe another user searched for "German Cuisine" and that had a very similar clickstream sequence. Well, we can build a script that analyzes both these users' (and others') clickstreams, identify similarities, and assuming it exceeds a preset `confidence threshold`, we can tell the script to append it to a [synonyms document](#) that contains "German", "Romanian", and other more common cuisines like "Hungarian".
+Maybe another user searched for "German Cuisine" and that had a very similar clickstream sequence. Well, we can build a script that analyzes both these users' (and others') clickstreams, identify similarities, and assuming it exceeds a preset `confidence threshold`, we can tell the script to append it to a [synonyms document](../5-synonyms) that contains "German", "Romanian", and other more common cuisines like "Hungarian".
 
 Let's dive into a tutorial on how to build this workflow
 
@@ -62,7 +62,7 @@ As events are fired, log them to the `clickstreams` collection, like:
 
 In this overly simplified list of events we can conclude that `{"session_id":"1"}` searched for "romanian food", which led to a higher conversion rate, `payment_success`, compared to `{"session_id":"2"}`, who searched "hungarian food" and stalled after `add_to_cart`.
 
-You can import this data yourself using [sample_data.json](/sample_data.json)
+You can import this data yourself using [sample_data.json](sample_data.json)
 
 Let's prepare the data for our search_tuner script.
 
@@ -125,7 +125,7 @@ By the way, it's no problem that only some documents have a `metadata` field, ou
 
 Let's create the view by building the query, then going into Compass and adding it as a new collection called `group_by_session_id_and_search_query`:
 
-![compass view screenshot](/assets/compass_view_creation.png)
+![compass view screenshot](assets/compass_view_creation.png)
 
 ### 3. Build a scheduled job that compares similar clickstreams and pushes the resulting synonyms to the synonyms collection
 
@@ -133,11 +133,11 @@ Let's create the view by building the query, then going into Compass and adding 
 print('hello world')
 ```
 
-Run [the script](/search_tuner.py) yourself
+Run [the script](search_tuner.py) yourself
 
 ### 4. Enhance our search query with the newly appended synonyms.
 
-See [the synonyms tutorial](../patterns/synonyms)
+See [the synonyms tutorial](../patterns/5-synonyms)
 
 ### Credit & Influence
 
