@@ -1,6 +1,6 @@
 # Synonym Search
 
-As of MongoDB Atlas release 5.0, Search has the ability to use a seperate synonyms collection to map words together as either `equivalent` or `explicit`. MongoDB's implementation os synonym search runs the comparison on query time (instead of on index creation like other search libraries) which allows it to auto-update as the documents change.
+Search has the ability to use a seperate synonyms collection to map words together as either `equivalent` or `explicit`. MongoDB's implementation os synonym search runs the comparison on query time (instead of on index creation like other search libraries) which allows it to auto-update as the documents change.
 
 Equivalent - Links multiple words together
 
