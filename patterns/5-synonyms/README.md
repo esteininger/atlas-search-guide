@@ -49,9 +49,9 @@ Explicit - Replaces one word with the other
             'index': 'synonym-search',
             'text': {
                 'query': 'wakeful',
-                'path': 'plot'
-            },
-            'synonyms': 'mySynonyms'
+                'path': 'plot',
+                'synonyms': 'mySynonyms'                
+            }
         }
     }
 ]
