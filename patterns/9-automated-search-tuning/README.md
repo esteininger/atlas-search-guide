@@ -2,7 +2,7 @@
 
 The standard way to improve your search queries' relevance is through manual intervention. For example, you can introduce [score boosting](../3-advanced-scoring) to ensure searches where a key is present in some fields weighs higher than others, this is however fixed by nature. The results are dynamic but the logic itself doesn't change via the query.
 
-The following project will showcase how to create a feedback loop that is self-tuning, in order to deliver incrementally more relevant search results to your users.
+The following project will showcase how to create a feedback loop that is self-tuning, in order to deliver incrementally more relevant search results to your users. All without complex machine learning models!
 
 ## Example
 
@@ -30,6 +30,7 @@ As events are fired, log them to the `clickstreams` collection, like:
 	{
 		"session_id": "1",
 		"event_id": "add_to_cart",
+		"product_category":"eastern european cuisine",
 		"timestamp": "2"
 	},
 	{
@@ -53,6 +54,7 @@ As events are fired, log them to the `clickstreams` collection, like:
 	{
 		"session_id": "2",
 		"event_id": "add_to_cart",
+		"product_category":"eastern european cuisine",
 		"timestamp": "2"
 	}
 ]
