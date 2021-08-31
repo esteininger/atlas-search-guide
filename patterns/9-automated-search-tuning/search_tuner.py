@@ -9,7 +9,8 @@ events_by_sessions = [{
       "search_value": "romanian food"
     },
     {
-      "event_id": "add_to_cart"
+      "event_id": "add_to_cart",
+      "product_category":"eastern european cuisine"
     },
     {
       "event_id": "checkout"
@@ -27,7 +28,11 @@ events_by_sessions = [{
       "search_value": "hungarian food"
     },
     {
-      "event_id": "add_to_cart"
+      "event_id": "add_to_cart",
+      "product_category":"eastern european cuisine"
+    },
+    {
+      "event_id": "checkout"
     }
   ],
   "searchQuery": "hungarian food"
@@ -37,10 +42,11 @@ events_by_sessions = [{
   "events": [
     {
       "event_id": "search_query",
-      "search_value": "asd food"
+      "search_value": "italian food"
     },
     {
       "event_id": "add_to_cart"
+      "product_category":"western european cuisine"      
     }
   ],
   "searchQuery": "sad food"
@@ -68,10 +74,10 @@ def compare_lists(events_by_sessions):
         # TODO: make this recursive
         for index, event in enumerate(user_session['events']):
             # compare each event in longest to the one in shortest
+            if event['event_id'] == longer_list['events'][index]['event_id']:
+                num_of_matches += 1
 
-            print(user_session['searchQuery'])
-
-
+        print(num_of_matches)
 
 
 
