@@ -1,8 +1,8 @@
 # Creating an Automatic Search Improvement Feedback Loop
 
-The standard way to improve your search queries' relevance is through manual intervention. For example, you can introduce [score boosting](../3-advanced-scoring) to ensure searches where a key is present in some fields weighs higher than others, this is however fixed by by nature. The results are dynamic but the logic itself doesn't change via the query.
+The standard way to improve your search queries' relevance is through manual intervention. For example, you can introduce [score boosting](../3-advanced-scoring) to ensure searches where a key is present in some fields weighs higher than others, this is however fixed by nature. The results are dynamic but the logic itself doesn't change via the query.
 
-The following project will showcase how to create a feedback loop that is self-tuning in order to deliver incrementally more relevant search results to your users.
+The following project will showcase how to create a feedback loop that is self-tuning, in order to deliver incrementally more relevant search results to your users.
 
 ## Example
 
@@ -127,6 +127,8 @@ Let's create the view by building the query, then going into Compass and adding 
 
 <img src="assets/compass_view_creation.png" alt="compass view screenshot" width="50%"/>
 
+<img src="assets/compass_document_view.png" alt="compass document view screenshot" width="50%"/>
+
 
 ### 3. Build a scheduled job that compares similar clickstreams and pushes the resulting synonyms to the synonyms collection
 
@@ -137,6 +139,21 @@ print('hello world')
 Run [the script](search_tuner.py) yourself
 
 ### 4. Enhance our search query with the newly appended synonyms.
+
+```javascript
+[
+    {
+        '$search': {
+            'index': 'synonym-search',
+            'text': {
+                'query': 'hungarian',
+                'path': 'cuisine-type'
+            },
+            'synonyms': 'similarCuisines'
+        }
+    }
+]
+```
 
 See [the synonyms tutorial](../patterns/5-synonyms)
 
