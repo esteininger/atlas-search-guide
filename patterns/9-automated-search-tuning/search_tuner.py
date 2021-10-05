@@ -45,8 +45,8 @@ events_by_sessions = [{
       "search_value": "italian food"
     },
     {
-      "event_id": "add_to_cart"
-      "product_category":"western european cuisine"      
+      "event_id": "add_to_cart",
+      "product_category":"western european cuisine"
     }
   ],
   "searchQuery": "sad food"
