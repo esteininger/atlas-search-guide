@@ -23,19 +23,10 @@ def search():
     agg_pipeline = [
         {
             '$search': {
-                'index': 'autocomplete',
-                'text': {
+                'index': 'autocomplete_index',
+                'autocomplete': {
                     'query': query,
-                    'path': ['title', 'fullplot'],
-                    # 'fuzzy': {
-                    #     'maxEdits': 2
-                    # }
-                    # 'score':{
-                    #     'boost': {
-                    #       "path": "metacritic",
-                    #       "undefined":4
-                    #     }
-                    # }
+                    'path': 'title'
                 }
             }
         }, {
