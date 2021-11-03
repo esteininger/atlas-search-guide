@@ -1,63 +1,61 @@
 # Faceting
 
-Faceting is set to release very soon in Atlas Search. Until then, we have a stopgap solution which involves using other MongoDB operators.
+Group and drill down by category
 
 ### Code Examples
 
-Here we are dynamically grouping documents by the date_inserted field, across 5 groups. We are also creating a brand new field, called categorizedByDateInserted.
+Assuming the `sample_mflix.movies` collection, the following index should be created:
 
 ```javascript
-[
-    {
-        '$facet': {
-            'categorizedByDateInserted': [
-                {
-                    '$bucketAuto': {
-                        'groupBy': '$date_inserted',
-                        'buckets': 5,
-                        'output': {
-                            'count': {
-                                '$sum': 1
-                            },
-                            'docs': {
-                                '$push': '$$ROOT'
-                            }
-                        }
-                    }
-                }
-            ]
-        }
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "directors": {
+        "type": "stringFacet"
+      },
+      "year": {
+        "type": "number"
+      },
+      "released": {
+        "type": "date"
+      }
     }
-]
+  }
+}
 ```
 
-Let's say however we'd like to specify the range, we can do that with $bucket via:
+And the following query:
 
 ```javascript
 [
-        {
-            '$facet': {
-                'categorizedByEmployeeCount': [
-                    {
-                        '$bucket': {
-                            'groupBy': '$company.employee_count',
-                            'boundaries': [
-                                0, 100, 1000, 10000, 100000
-                            ],
-                            'output': {
-                                'count': {
-                                    '$sum': 1
-                                },
-                                'docs': {
-                                    '$push': "$$ROOT"
-                                }
-                            }
-                        }
-                    }
-                ]
-            }
-        }
-    ]
+ {
+   "$searchMeta": {
+     "index":"ethan_facet",
+     "facet": {
+       "operator": {
+         "range": {
+           "path": "released",
+           "gte": ISODate("2000-01-01T00:00:00.000Z"),
+           "lte": ISODate("2015-01-31T00:00:00.000Z")
+         }
+       },
+       "facets": {
+         "directorsFacet": {
+           "type": "string",
+           "path": "directors",
+           "numBuckets" : 7
+         },
+         "yearFacet" : {
+           "type" : "number",
+           "path" : "year",
+           "boundaries" : [2000,2005,2010,2015]
+         }
+       }
+     }
+   }
+ }
+]
 ```
 
 ### Author(s)
