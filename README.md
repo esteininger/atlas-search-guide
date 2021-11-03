@@ -33,6 +33,7 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 | 7  | Diacritics           | Include multiple languages
 | 8  | [Compound](foundations/6-compound)            | Combine two or more operators into a single query (or clause)
 | 9  | Explain            | Understand how the mongot (lucene) returns results in order to tune performance.
+| 10  | Count            | Return a count of the documents returned.
 
 
 ## Search Patterns & Use Cases

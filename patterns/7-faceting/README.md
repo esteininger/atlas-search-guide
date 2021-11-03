@@ -64,5 +64,4 @@ And the following query:
 
 ### References
 
-- [$bucket](https://docs.mongodb.com/manual/reference/operator/aggregation/bucket/)
-- [$bucketAuto](https://docs.mongodb.com/manual/reference/operator/aggregation/bucketAuto/)
+- [$facet](https://docs.atlas.mongodb.com/reference/atlas-search/facet)
