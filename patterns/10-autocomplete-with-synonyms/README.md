@@ -116,13 +116,13 @@ Collection, `synonyms` inside database `sample_mflix`, create an equivalence doc
     "compound": {
       "should": [{
         "autocomplete": {
-          "query": 'insomniac',
+          "query": 'wrestle',
           "path": 'title'
         }
       }],
       "should": [{
         "text": {
-          "query": 'insomniac',
+          "query": 'wrestle',
           "path": 'title',
           'synonyms': 'mySynonyms'
         }
