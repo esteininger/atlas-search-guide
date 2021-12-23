@@ -1,31 +1,39 @@
 [{
-  "_id": "1",
-  "events": [
-    {
-      "event_id": "search_query",
-      "search_value": "romanian food"
-    },
-    {
-      "event_id": "add_to_cart"
-    },
-    {
-      "event_id": "checkout"
-    },
-    {
-      "event_id": "payment_success"
-    }
-  ],
-  "searchQuery": "romanian food"
-},{
-  "_id": "2",
-  "events": [
-    {
-      "event_id": "search_query",
-      "search_value": "hungarian food"
-    },
-    {
-      "event_id": "add_to_cart"
-    }
-  ],
-  "searchQuery": "hungarian food"
-}]
+		"session_id": "1",
+		"event_id": "search_query",
+		"metadata": {
+			"search_value": "romanian food"
+		},
+		"timestamp": "1"
+	},
+	{
+		"session_id": "1",
+		"event_id": "add_to_cart",
+		"product_category":"eastern european cuisine",
+		"timestamp": "2"
+	},
+	{
+		"session_id": "1",
+		"event_id": "checkout",
+		"timestamp": "3"
+	},
+	{
+		"session_id": "1",
+		"event_id": "payment_success",
+		"timestamp": "4"
+	},
+	{
+		"session_id": "2",
+		"event_id": "search_query",
+		"metadata": {
+			"search_value": "hungarian food"
+		},
+		"timestamp": "1"
+	},
+	{
+		"session_id": "2",
+		"event_id": "add_to_cart",
+		"product_category":"eastern european cuisine",
+		"timestamp": "2"
+	}
+]
