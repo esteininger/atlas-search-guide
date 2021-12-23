@@ -4,7 +4,7 @@ Applications often have the concept of "saved searches", where their users' hist
 
 To put it more tangibly, let's say you run a real estate listing application. Your client is on the market for a house in the $500k - $750k range. Whenever they create a new search with different criteria, maybe one search includes a garage and the other has no HOA fees, you will be logging each of these deviations in a "historical queries" collection. Now whenever a new house is added to the homes collection, your system will search this new house through the entire historical queries collection, find any matches, and notify the user.
 
-<img src="/diagram.png" width="500"/>
+<img src="diagram.png" width="500"/>
 
 
 ## Demo
