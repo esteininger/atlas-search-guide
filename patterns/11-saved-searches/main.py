@@ -4,7 +4,7 @@ from pymongo import monitoring
 
 
 # Atlas connection string
-mongo_uri = 'mongodb+srv://ethan:1RrQIU5UZrp5Gci2@dev.v7a3k.mongodb.net/test?retryWrites=true&w=majority'
+mongo_uri = 'mongodb+srv://username:password@hostname/test?retryWrites=true&w=majority'
 
 # connection obj
 connection = pymongo.MongoClient(mongo_uri)
