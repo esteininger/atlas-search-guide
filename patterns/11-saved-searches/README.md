@@ -7,7 +7,7 @@ To put it more tangibly, let's say you run a real estate listing application. Yo
 <img src="diagram.png" width="1000"/>
 
 
-## Demo
+## Code
 
 ### 1. Send queries to a new collection
 
