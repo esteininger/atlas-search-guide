@@ -49,6 +49,13 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 | 7  | [Faceting](patterns/7-faceting)         | Dynamically cluster search results into categories in order to drill down
 | 8  | [Custom Analyzers](patterns/8-custom-analyzers)         | Building our own custom analyzers to satisfy different app requirements
 
+## End to End Code Demos
+
+| #  | Source                              | Description                                                                                                                                                                                                                                                                 
+|----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1  | [MongoRX](https://github.com/mongodb-developer/MongoRx)            | GraphQL with custom Resolver
+| 2  | [Auto-Tuning](https://www.mongodb.com/developer/how-to/improve-your-apps-search-results-with-auto-tuning/)            | Using synonyms, auto-improve your search results
+
 
 
 ## Example Search Architecture
