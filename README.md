@@ -55,6 +55,7 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 |----|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | [MongoRX](https://github.com/mongodb-developer/MongoRx)            | GraphQL with custom Resolver
 | 2  | [Auto-Tuning](https://www.mongodb.com/developer/how-to/improve-your-apps-search-results-with-auto-tuning/)            | Using synonyms, auto-improve your search results
+| 3  | [Restaurant Finder](https://restaurantfinder-ydobg.mongodbstitch.com/)            | Restaurant finder app that showcases search queries
 
 
 
