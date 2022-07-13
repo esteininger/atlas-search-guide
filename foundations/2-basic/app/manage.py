@@ -23,7 +23,8 @@ def search():
     agg_pipeline = [
         {
             '$search': {
-                'term': {
+                'index': 'default',
+                'text': {
                     'query': query,
                     'path': path,
                     # fuzzy search
