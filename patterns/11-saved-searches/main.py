@@ -1,13 +1,17 @@
 import pymongo
 import logging
-from pymongo import monitoring
+
+class CommandLogger(pymongo.monitoring.CommandListener):
+
+    def started(self, event):
+        print(event)
 
 
 # Atlas connection string
 mongo_uri = 'mongodb+srv://ethan:1RrQIU5UZrp5Gci2@dev.v7a3k.mongodb.net/test?retryWrites=true&w=majority'
 
 # connection obj
-connection = pymongo.MongoClient(mongo_uri)
+connection = pymongo.MongoClient(mongo_uri, event_listeners=[CommandLogger()])
 
 # DBs and collections
 db = 'sample_mflix'
@@ -42,16 +46,11 @@ search_query = [
 #     for document in history_collection.watch(pipeline=pipeline, full_document='updateLookup'):
 #         document['fullDocument']['email']
 
-class QueryLogger(monitoring.CommandListener):
 
-    def log(self, event):
-        print("an event was logged", event)
-
-monitoring.register(QueryLogger())
 
 def main():
-    r = connection[db]["test"].insert_one({"title":"Fight Club"})
-    print("query:", list(r))
+    r = connection[db][collection].find_one({"title":"Fight Club"})
+    print("query:", r)
 
 
 if __name__ == '__main__':
