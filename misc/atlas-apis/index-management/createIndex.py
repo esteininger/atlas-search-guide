@@ -5,7 +5,7 @@ from requests.auth import HTTPDigestAuth
 from settings import *
 import json
 
-clusterName = 'FINRA-adReg-PoV'
+clusterName = 'CLUSTER_NAME'
 mappingsAsJSON = json.load(open('mappingsFile.json'))
 
 url = f"https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupID}/clusters/{clusterName}/fts/indexes?pretty=true"
