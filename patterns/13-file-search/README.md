@@ -10,6 +10,8 @@ App dependencies:
 pip install -r requirements.txt
 ```
 
+**Note:** Your system must have Java 7+ because when you install `tika` via pip, it also installs Tika in addition to the Tika REST server. 
+
 ### Setup
 
 - Add your AWS keys, Atlas Keys and MongoDB credentials to `config.py`
