@@ -40,7 +40,7 @@ def download_file():
         # parse the file
         parsed_pdf_content = parser.from_file(s3_file_name)['content']
         print("file contents extracted")
-        # insert parsed pdf content into elasticsearch
+        # insert parsed pdf content into atlas search
         insert_into_search_engine(s3_file_name, parsed_pdf_content)
         print("file contents inserted into search engine")
 
