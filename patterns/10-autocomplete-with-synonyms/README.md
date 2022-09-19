@@ -71,12 +71,11 @@ Using the `sample_mflix.movies` collection, with a document like:
 ```json
 {
   "mappings": {
-    "dynamic": true,
+    "dynamic": false,
     "fields": {
       "title": [
         {
-          "type": "document",
-          "dynamic": true
+          "type": "string"
         },
         {
           "type": "autocomplete"
@@ -84,12 +83,12 @@ Using the `sample_mflix.movies` collection, with a document like:
       ]
     }
   },
-	"synonyms": [
+  "synonyms": [
     {
       "analyzer": "lucene.standard",
       "name": "mySynonyms",
       "source": {
-        "collection": "synonyms"
+        "collection": "movies_synonyms"
       }
     }
   ]

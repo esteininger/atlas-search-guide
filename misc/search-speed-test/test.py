@@ -58,6 +58,9 @@ def query():
 
 
 if __name__ == '__main__':
+    # clear
+    # client.delete_many({})
+    # print('deleting')
     # insert
     size_limit()
     # start
