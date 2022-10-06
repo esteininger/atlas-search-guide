@@ -4,4 +4,4 @@ Index intersection provides the ability to execute a performant query that spans
 
 It is very rare however that MongoDB’s query planner selects a plan that involves index intersection. We’ll walk through a scenario in which this becomes a requirement. 
 
-[Blog Post](https://www.mongodb.com/developer/products/atlas/atlas-search-for-index-intersection/)
+[Blog Post on the subject](https://www.mongodb.com/developer/products/atlas/flexible-querying-with-atlas-search/)
