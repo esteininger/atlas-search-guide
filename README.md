@@ -49,7 +49,6 @@ This Full Text Search Guide teaches the foundations and enhancements, so you can
 | 10  | [Autocomplete With Synonyms](patterns/10-autocomplete-with-synonyms) |                                                                                                         |
 | 11  | [Saved Searches](patterns/11-saved-searches)                         |                                                                                                         |
 | 12  | [Flexible Querying](patterns/12-flexible-querying)                 | The ability to combine multiple indexes to perform performant queries.                                  |
-| 13  | [File Contents Search](patterns/13-file-search)                 | Searching the contents of files.                                  |
 
 ## End to End Code Demos
 
